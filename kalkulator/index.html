@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Kalkulator Sederhana</title>
+  </head>
+  <body>
+    <h1>Kalkulator Sederhana</h1>
+    <form>
+      <input type="text" id="num1" placeholder="Masukkan angka pertama" /><br /><br />
+      <input type="text" id="num2" placeholder="Masukkan angka kedua" /><br /><br />
+      <button type="button" onclick="add()">+</button>
+      <button type="button" onclick="subtract()">-</button>
+      <button type="button" onclick="multiply()">*</button>
+      <button type="button" onclick="divide()">/</button>
+    </form>
+    <p id="result"></p>
+    <script>
+      function add() {
+        var num1 = parseInt(document.getElementById("num1").value);
+        var num2 = parseInt(document.getElementById("num2").value);
+        var result = num1 + num2;
+        document.getElementById("result").innerHTML = "Hasil: " + result;
+      }
+      function subtract() {
+        var num1 = parseInt(document.getElementById("num1").value);
+        var num2 = parseInt(document.getElementById("num2").value);
+        var result = num1 - num2;
+        document.getElementById("result").innerHTML = "Hasil: " + result;
+      }
+      function multiply() {
+        var num1 = parseInt(document.getElementById("num1").value);
+        var num2 = parseInt(document.getElementById("num2").value);
+        var result = num1 * num2;
+        document.getElementById("result").innerHTML = "Hasil: " + result;
+      }
+      function divide() {
+        var num1 = parseInt(document.getElementById("num1").value);
+        var num2 = parseInt(document.getElementById("num2").value);
+        var result = num1 / num2;
+        document.getElementById("result").innerHTML = "Hasil: " + result;
+      }
+    </script>
+  </body>
+</html>
